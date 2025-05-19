@@ -12,22 +12,14 @@ st.markdown(
         color: #333333;
     }
 
-    /* Darker and bold header */
+    /* Normal clean header */
     .header {
-        font-size: 3rem;
-        font-weight: 800;
+        font-size: 2.5rem;
+        font-weight: 600;
         text-align: center;
         margin-bottom: 2.5rem;
-        color: #0f172a; /* very dark slate */
+        color: #1f2937; /* dark slate */
         user-select: none;
-        border-bottom: 3px solid #2563eb; /* blue underline */
-        display: inline-block;
-        padding-bottom: 8px;
-        transition: color 0.3s ease;
-    }
-    .header:hover {
-        color: #1e40af; /* darker blue on hover */
-        cursor: default;
     }
 
     /* Input box styling */
