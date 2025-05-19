@@ -18,7 +18,7 @@ st.markdown(
         font-weight: 600;
         text-align: center;
         margin-bottom: 2.5rem;
-        color: #1f2937; /* dark slate */
+        color: #fffff; /* dark slate */
         user-select: none;
     }
 
@@ -104,7 +104,7 @@ if daily_volume > 0:
         <h2>Ideal Headcount per Shift</h2>
         <div class="result-value">{hc_per_shift:.2f}</div>
         <p>Volume per shift: <strong>{volume_per_shift:.2f}</strong></p>
-        <p>AA BM rate per shift: <strong>{aa_bm_rate_shift}</strong></p>
+        <p>AA BM rate/hr/shift: <strong>{aa_bm_rate_shift}</strong></p>
     </div>
     """
     st.markdown(card_html, unsafe_allow_html=True)
