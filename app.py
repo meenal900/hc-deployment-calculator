@@ -12,25 +12,26 @@ if daily_volume > 0:
     volume_per_shift = daily_volume / 2
     hc_per_shift = volume_per_shift / aa_bm_rate_shift
 
-    # Custom CSS for card and hover effect
+    # Custom CSS with darker background and white text
     card_style = """
     <style>
     .card {
-        background: #f0f2f6;
+        background: #1e3a8a;  /* Dark blue */
+        color: white;
         border-radius: 10px;
         padding: 20px;
         margin: 20px 0;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        box-shadow: 0 2px 5px rgba(0,0,0,0.3);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         max-width: 400px;
     }
     .card:hover {
         transform: translateY(-5px);
-        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.5);
     }
     .card h2 {
         margin: 0;
-        color: #4a90e2;
+        color: #a5b4fc;  /* lighter blue */
     }
     </style>
     """
