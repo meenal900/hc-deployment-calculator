@@ -12,7 +12,7 @@ st.markdown(
         color: #333333;
     }
 
-    /* Plain static header, no animation, no hover */
+    /* Plain static header */
     .header {
         font-size: 2.5rem;
         font-weight: 600;
@@ -20,7 +20,6 @@ st.markdown(
         margin-bottom: 2.5rem;
         color: #1f2937; /* dark slate */
         user-select: none;
-        /* No hover or animation */
     }
 
     /* Input box styling */
@@ -36,7 +35,7 @@ st.markdown(
         outline: none;
     }
 
-    /* Card with animation & hover */
+    /* Static card without animation or hover */
     .card {
         background: #ffffff;
         color: #1f2937;
@@ -47,24 +46,12 @@ st.markdown(
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         text-align: center;
         user-select: none;
-
-        /* Animation */
-        opacity: 0;
-        transform: translateY(20px);
-        animation: fadeSlideUp 0.6s forwards;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        /* No animation or hover */
+        transform: none !important;
+        opacity: 1 !important;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        transition: none !important;
         cursor: default;
-    }
-    .card:hover {
-        transform: scale(1.03);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    }
-
-    @keyframes fadeSlideUp {
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
     }
 
     .card h2 {
@@ -78,26 +65,20 @@ st.markdown(
         margin: 0.5rem 0;
     }
 
-    /* Ideal HC result style and hover */
+    /* Result value static - no hover */
     .result-value {
         font-size: 2.75rem;
         font-weight: 800;
         margin: 1rem 0 1.5rem 0;
         color: #111827;
-        transition: color 0.3s ease, transform 0.3s ease;
         display: inline-block;
-    }
-    .result-value:hover {
-        color: #2563eb; /* blue highlight */
-        transform: scale(1.1);
-        cursor: default;
+        transition: none !important;
     }
     </style>
     """,
     unsafe_allow_html=True,
 )
 
-# Plain header with no animation or hover
 st.markdown('<div class="header">HC Deployment Calculator for Inbound</div>', unsafe_allow_html=True)
 
 daily_volume = st.number_input(
