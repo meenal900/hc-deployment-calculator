@@ -12,7 +12,7 @@ st.markdown(
         color: #333333;
     }
 
-    /* Plain static header */
+    /* Static header */
     .header {
         font-size: 2.5rem;
         font-weight: 600;
@@ -22,20 +22,20 @@ st.markdown(
         user-select: none;
     }
 
-    /* Input box styling */
+    /* Input styling */
     .stNumberInput>div>div>input {
         font-size: 1.1rem;
         padding: 8px 12px;
         border-radius: 5px;
         border: 1.5px solid #9ca3af;
-        transition: border-color 0.2s ease;
+        transition: border-color 0.3s ease;
     }
     .stNumberInput>div>div>input:focus {
         border-color: #2563eb;
         outline: none;
     }
 
-    /* Card with smooth animated hover */
+    /* Result card with eye-catching hover animation */
     .card {
         background: #ffffff;
         color: #1f2937;
@@ -43,17 +43,19 @@ st.markdown(
         padding: 25px 30px;
         margin: 2rem auto;
         max-width: 420px;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         text-align: center;
         user-select: none;
-        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         cursor: default;
-        opacity: 1;
-        transform: none;
+        transition:
+          transform 0.35s cubic-bezier(0.25, 1.25, 0.5, 1),
+          box-shadow 0.35s cubic-bezier(0.25, 1.25, 0.5, 1),
+          background-color 0.35s ease;
     }
     .card:hover {
-        transform: scale(1.05);
-        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+        transform: scale(1.07) rotate(1deg);
+        box-shadow: 0 15px 30px rgba(37, 99, 235, 0.5);
+        background-color: #e0f2fe; /* subtle blue glow */
     }
 
     .card h2 {
