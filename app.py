@@ -2,7 +2,6 @@ import streamlit as st
 
 st.set_page_config(page_title="HC Deployment Calculator", layout="centered")
 
-# Formal CSS styling
 st.markdown(
     """
     <style>
@@ -13,30 +12,38 @@ st.markdown(
         color: #333333;
     }
 
-    /* Header style */
+    /* Improved header style */
     .header {
-        font-size: 2rem;
-        font-weight: 600;
+        font-size: 2.8rem;
+        font-weight: 700;
         text-align: center;
-        margin-bottom: 2rem;
-        color: #1f2937; /* dark slate */
+        margin-bottom: 2.5rem;
+        color: #111827; /* darker */
         user-select: none;
+        border-bottom: 3px solid #2563eb; /* blue underline */
+        display: inline-block;
+        padding-bottom: 8px;
+        transition: color 0.3s ease;
+    }
+    .header:hover {
+        color: #1e40af; /* darker blue on hover */
+        cursor: default;
     }
 
-    /* Input box */
+    /* Input box styling */
     .stNumberInput>div>div>input {
         font-size: 1.1rem;
         padding: 8px 12px;
         border-radius: 5px;
-        border: 1.5px solid #9ca3af; /* gray */
+        border: 1.5px solid #9ca3af;
         transition: border-color 0.2s ease;
     }
     .stNumberInput>div>div>input:focus {
-        border-color: #2563eb; /* blue */
+        border-color: #2563eb;
         outline: none;
     }
 
-    /* Card style */
+    /* Card with animation & hover */
     .card {
         background: #ffffff;
         color: #1f2937;
@@ -47,12 +54,31 @@ st.markdown(
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         text-align: center;
         user-select: none;
+
+        /* Animation */
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeSlideUp 0.6s forwards;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: default;
     }
+    .card:hover {
+        transform: scale(1.03);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    @keyframes fadeSlideUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
     .card h2 {
         margin-bottom: 1rem;
         font-weight: 700;
         font-size: 1.75rem;
-        color: #2563eb; /* blue */
+        color: #2563eb;
     }
     .card p {
         font-size: 1.1rem;
@@ -62,7 +88,7 @@ st.markdown(
         font-size: 2.5rem;
         font-weight: 700;
         margin: 1rem 0 1.5rem 0;
-        color: #111827; /* almost black */
+        color: #111827;
     }
     </style>
     """,
