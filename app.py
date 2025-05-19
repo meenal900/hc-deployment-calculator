@@ -12,13 +12,13 @@ st.markdown(
         color: #333333;
     }
 
-    /* Improved header style */
+    /* Darker and bold header */
     .header {
-        font-size: 2.8rem;
-        font-weight: 700;
+        font-size: 3rem;
+        font-weight: 800;
         text-align: center;
         margin-bottom: 2.5rem;
-        color: #111827; /* darker */
+        color: #0f172a; /* very dark slate */
         user-select: none;
         border-bottom: 3px solid #2563eb; /* blue underline */
         display: inline-block;
@@ -84,11 +84,20 @@ st.markdown(
         font-size: 1.1rem;
         margin: 0.5rem 0;
     }
+
+    /* Ideal HC result style and hover */
     .result-value {
-        font-size: 2.5rem;
-        font-weight: 700;
+        font-size: 2.75rem;
+        font-weight: 800;
         margin: 1rem 0 1.5rem 0;
         color: #111827;
+        transition: color 0.3s ease, transform 0.3s ease;
+        display: inline-block;
+    }
+    .result-value:hover {
+        color: #2563eb; /* blue highlight */
+        transform: scale(1.1);
+        cursor: default;
     }
     </style>
     """,
