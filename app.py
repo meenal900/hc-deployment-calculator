@@ -18,7 +18,7 @@ st.markdown(
         font-weight: 600;
         text-align: center;
         margin-bottom: 2.5rem;
-        color: #FFFFFF; /* dark slate */
+        color: #fffff; /* dark slate */
         user-select: none;
     }
 
@@ -35,7 +35,7 @@ st.markdown(
         outline: none;
     }
 
-    /* Static card without animation or hover */
+    /* Card with hover effect only, no animation */
     .card {
         background: #ffffff;
         color: #1f2937;
@@ -46,12 +46,14 @@ st.markdown(
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         text-align: center;
         user-select: none;
-        /* No animation or hover */
-        transform: none !important;
-        opacity: 1 !important;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-        transition: none !important;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
         cursor: default;
+        opacity: 1;
+        transform: none;
+    }
+    .card:hover {
+        transform: scale(1.03);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     }
 
     .card h2 {
@@ -65,14 +67,13 @@ st.markdown(
         margin: 0.5rem 0;
     }
 
-    /* Result value static - no hover */
+    /* Result value styling */
     .result-value {
         font-size: 2.75rem;
         font-weight: 800;
         margin: 1rem 0 1.5rem 0;
         color: #111827;
         display: inline-block;
-        transition: none !important;
     }
     </style>
     """,
