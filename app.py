@@ -41,7 +41,7 @@ if daily_volume > 0:
         <h2>Ideal HC per shift</h2>
         <p style="font-size: 2em; font-weight: bold; margin: 10px 0;">{hc_per_shift:.2f}</p>
         <p>Volume per shift: {volume_per_shift:.2f}</p>
-        <p>AA BM rate per shift: {aa_bm_rate_shift}</p>
+        <p>AA BM rate per shift per hour: {aa_bm_rate_shift}</p>
     </div>
     """
 
