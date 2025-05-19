@@ -18,7 +18,7 @@ st.markdown(
         font-weight: 600;
         text-align: center;
         margin-bottom: 2.5rem;
-        color: #fffff; /* dark slate */
+        color: #1f2937; /* dark slate */
         user-select: none;
     }
 
@@ -35,7 +35,7 @@ st.markdown(
         outline: none;
     }
 
-    /* Card with hover effect only, no animation */
+    /* Card with smooth animated hover */
     .card {
         background: #ffffff;
         color: #1f2937;
@@ -46,14 +46,14 @@ st.markdown(
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         text-align: center;
         user-select: none;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         cursor: default;
         opacity: 1;
         transform: none;
     }
     .card:hover {
-        transform: scale(1.03);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        transform: scale(1.05);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
     }
 
     .card h2 {
