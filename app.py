@@ -12,7 +12,7 @@ st.markdown(
         color: #333333;
     }
 
-    /* Normal clean header */
+    /* Plain static header, no animation, no hover */
     .header {
         font-size: 2.5rem;
         font-weight: 600;
@@ -20,6 +20,7 @@ st.markdown(
         margin-bottom: 2.5rem;
         color: #1f2937; /* dark slate */
         user-select: none;
+        /* No hover or animation */
     }
 
     /* Input box styling */
@@ -96,6 +97,7 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
+# Plain header with no animation or hover
 st.markdown('<div class="header">HC Deployment Calculator for Inbound</div>', unsafe_allow_html=True)
 
 daily_volume = st.number_input(
