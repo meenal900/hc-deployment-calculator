@@ -18,7 +18,7 @@ st.markdown(
         font-weight: 600;
         text-align: center;
         margin-bottom: 2.5rem;
-        color: #1f2937; /* dark slate */
+        color: #FFFFFF; /* dark slate */
         user-select: none;
     }
 
