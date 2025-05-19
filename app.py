@@ -16,7 +16,7 @@ if daily_volume > 0:
 
     st.write(f"## Results")
     st.write(f"Volume per shift: {volume_per_shift:.2f}")
-    st.write(f"AA BM rate per shift (volume processed by 1 AA): {aa_bm_rate_shift}")
+    st.write(f"AA BM rate per shift (volume processed by 1 AA/hr): {aa_bm_rate_shift}")
     st.write(f"**Ideal Headcount (HC) to deploy per shift:** {hc_per_shift:.2f}")
 else:
     st.write("Please enter a valid volume greater than 0.")
